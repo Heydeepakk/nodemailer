@@ -13,7 +13,7 @@ exports.mail = async (req,res)=>{
         
     try {
         const info = await transporter.sendMail({
-            from: '"Fred Foo 👻" <deepak@evramedia.com>',
+            from: '"Fred Foo 👻"',
             to: req.body.to,
             subject: req.body.subject,
             text: req.body.content,
