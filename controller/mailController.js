@@ -15,9 +15,9 @@ exports.mail = async (req,res)=>{
         const info = await transporter.sendMail({
             from: '"Fred Foo 👻" <deepak@evramedia.com>',
             to: req.body.to,
-            subject: "Hello ✔",
-            text: "Hello world?",
-            html: "<b>Hello world?</b>",
+            subject: req.body.subject,
+            text: req.body.content,
+            // html: "<b>Hello world?</b>",
         });
 
         console.log("Message sent: %s", info.messageId);
