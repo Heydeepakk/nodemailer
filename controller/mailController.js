@@ -12,11 +12,21 @@ exports.mail = async (req,res)=>{
     });
         
     try {
+        const { name, email, phoneNumber, message } = req.body;
+
+        const mailBody = `
+            Name: ${name}
+            Email: ${email}
+            Phone Number: ${phoneNumber}
+            Message: ${message}
+        `;
+
         const info = await transporter.sendMail({
-            from: '"Fred Foo 👻"',
-            to: req.body.to,
+            from: '"Codebuddyhub" <deepak@evramedia.com>',
+            // to: 'akankitkumar3896@gmail.com',
+            to: 'deepak@evramedia.com',
             subject: req.body.subject,
-            text: req.body.content,
+            text: mailBody,
             // html: "<b>Hello world?</b>",
         });
 
