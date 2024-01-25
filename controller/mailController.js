@@ -22,12 +22,10 @@ exports.mail = async (req,res)=>{
         `;
 
         const info = await transporter.sendMail({
-            from: '"Codebuddyhub" <deepak@evramedia.com>',
-            // to: 'akankitkumar3896@gmail.com',
-            to: 'deepak@evramedia.com',
+            from: '"Codebuddyhub" <deepaksharma121003@gmail.com>',
+            to: 'deepaksharma121003@gmail.com',
             subject: req.body.subject,
             text: mailBody,
-            // html: "<b>Hello world?</b>",
         });
 
         console.log("Message sent: %s", info.messageId);
