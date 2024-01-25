@@ -22,7 +22,7 @@ exports.mail = async (req,res)=>{
         `;
 
         const info = await transporter.sendMail({
-            from: '"Codebuddyhub" <deepaksharma121003@gmail.com>',
+            from: '"Motowheel" <deepaksharma121003@gmail.com>',
             to: 'deepaksharma121003@gmail.com',
             subject: req.body.subject,
             text: mailBody,
